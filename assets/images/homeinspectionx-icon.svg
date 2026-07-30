@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <!-- Circular frame -->
+  <circle cx="200" cy="180" r="140" fill="none" stroke="#0EA5E9" stroke-width="4"/>
+
+  <!-- House silhouette -->
+  <g transform="translate(200,180)">
+    <!-- Roof -->
+    <polygon points="-80,10 0,-70 80,10" fill="#1E3A5F"/>
+    <!-- Chimney -->
+    <rect x="40" y="-55" width="20" height="30" fill="#1E3A5F" rx="1"/>
+    <!-- Walls -->
+    <rect x="-70" y="10" width="140" height="90" fill="#1E3A5F"/>
+    <!-- Door -->
+    <rect x="-12" y="50" width="24" height="50" rx="12" fill="#FFFFFF"/>
+
+    <!-- Magnifying glass -->
+    <g transform="translate(10,-5) rotate(-15)">
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#0EA5E9" stroke-width="4"/>
+      <line x1="20" y1="20" x2="38" y2="38" stroke="#0EA5E9" stroke-width="5" stroke-linecap="round"/>
+      <!-- Window inside magnifying glass -->
+      <rect x="-10" y="-10" width="8" height="8" rx="1" fill="#FFFFFF"/>
+      <rect x="0" y="-10" width="8" height="8" rx="1" fill="#FFFFFF"/>
+      <rect x="-10" y="0" width="8" height="8" rx="1" fill="#FFFFFF"/>
+      <rect x="0" y="0" width="8" height="8" rx="1" fill="#FFFFFF"/>
+    </g>
+  </g>
+</svg>

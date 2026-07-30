@@ -1,0 +1,103 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: assets/images
+public_folder: /assets/images
+
+collections:
+  - name: hero
+    label: Hero
+    file: _data/hero.json
+    format: json
+    fields:
+      - label: Headline
+        name: headline
+        widget: string
+      - label: Subtext
+        name: subtext
+        widget: text
+      - label: CTA Text
+        name: cta_text
+        widget: string
+      - label: CTA Link
+        name: cta_link
+        widget: string
+
+  - name: about
+    label: About
+    file: _data/about.json
+    format: json
+    fields:
+      - label: Headline
+        name: headline
+        widget: string
+      - label: Body
+        name: body
+        widget: text
+
+  - name: apps
+    label: Apps
+    file: _data/apps.json
+    format: json
+    fields:
+      - label: Apps
+        name: apps
+        widget: list
+        fields:
+          - label: Name
+            name: name
+            widget: string
+          - label: Tagline
+            name: tagline
+            widget: string
+          - label: Description
+            name: description
+            widget: text
+          - label: Icon
+            name: icon
+            widget: image
+          - label: Status
+            name: status
+            widget: select
+            options:
+              - "Coming soon"
+              - "Available"
+              - "In development"
+          - label: Link
+            name: link
+            widget: string
+            required: false
+
+  - name: contact
+    label: Contact
+    file: _data/contact.json
+    format: json
+    fields:
+      - label: Email
+        name: email
+        widget: string
+      - label: Legal Entity
+        name: legal_entity
+        widget: string
+      - label: Location
+        name: location
+        widget: string
+        required: false
+
+  - name: legal
+    label: Legal Pages
+    folder: legal/
+    create: true
+    slug: "{{slug}}"
+    extension: html
+    format: html-frontmatter
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown

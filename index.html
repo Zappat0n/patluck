@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patluck LLC — Practical software for professionals.</title>
+  <link rel="icon" href="assets/images/logo-2.svg" type="image/svg+xml">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Satoshi", "system-ui", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"],
+          },
+          colors: {
+            brand: { 900: "#20421C", 600: "#3A7D34", 500: "#4A9E3F", 400: "#5DAA52" },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    [data-reveal-delay="1"] {
+      transition-delay: 0.1s;
+    }
+
+    [data-reveal-delay="2"] {
+      transition-delay: 0.2s;
+    }
+
+    [data-reveal-delay="3"] {
+      transition-delay: 0.3s;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    *:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased text-zinc-900 dark:text-zinc-100 bg-zinc-50 dark:bg-zinc-950">
+
+  <!-- Nav -->
+  <header
+    class="fixed top-0 inset-x-0 z-50 h-[68px] flex items-center bg-zinc-50/90 dark:bg-zinc-950/90 backdrop-blur-sm">
+    <nav class="w-full max-w-[1200px] mx-auto px-6 flex items-center justify-between">
+      <a href="#" class="flex-shrink-0 flex items-center gap-2.5">
+        <img src="assets/images/logo-2.svg" alt="" class="h-12 w-12 flex-shrink-0" aria-hidden="true">
+        <span class="text-lg font-bold tracking-tight text-brand-900 dark:text-brand-400 whitespace-nowrap">PATLUCK</span>
+      </a>
+      <div class="flex items-center gap-5">
+        <a href="#about"
+          class="text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          data-i18n="nav.about">About</a>
+        <a href="#apps"
+          class="text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          data-i18n="nav.apps">Apps</a>
+        <a href="#contact"
+          class="text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          data-i18n="nav.contact">Contact</a>
+        <button id="theme-toggle"
+          class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors p-1"
+          aria-label="Toggle theme">
+          <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.752 15.002A9.72 9.72 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+          </svg>
+          <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+          </svg>
+        </button>
+        <button data-lang-toggle
+          class="text-xs font-mono font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors py-1 px-2 rounded border border-zinc-200 dark:border-zinc-800">ES</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 min-h-[100dvh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="assets/images/hero.jpeg" alt="" class="w-full h-full object-cover" aria-hidden="true">
+      <div class="absolute inset-0 bg-zinc-50/70 dark:bg-zinc-950/70"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-zinc-50 dark:from-zinc-950 via-zinc-50/80 dark:via-zinc-950/80 to-transparent">
+      </div>
+    </div>
+    <div class="relative w-full max-w-[1200px] mx-auto px-6">
+      <div class="grid md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-7" data-reveal>
+          <h1
+            class="text-5xl md:text-6xl lg:text-7xl font-bold leading-none tracking-tighter text-zinc-900 dark:text-zinc-100"
+            data-i18n="hero.headline">Software that works.</h1>
+          <p class="mt-6 text-base md:text-lg leading-relaxed text-zinc-500 dark:text-zinc-400 max-w-[42ch]"
+            data-i18n="hero.subtext">We build tools for professionals who need reliable, well-designed applications.</p>
+          <a href="#contact"
+            class="mt-8 inline-flex items-center gap-2 bg-brand-900 dark:bg-brand-600 hover:bg-brand-600 dark:hover:bg-brand-400 text-white font-bold text-sm px-6 py-3 rounded-lg transition-colors"
+            data-i18n="hero.cta">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 md:py-32">
+    <div class="w-full max-w-[1200px] mx-auto px-6">
+      <div class="grid md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-7" data-reveal>
+          <h2 class="text-3xl md:text-4xl font-bold leading-tight tracking-tight text-zinc-900 dark:text-zinc-100"
+            data-i18n="about.headline">What we do</h2>
+          <p class="mt-6 text-base leading-relaxed text-zinc-500 dark:text-zinc-400 max-w-[55ch]"
+            data-i18n="about.body">Patluck LLC is a software studio building practical applications for professionals.
+            Our first product, HomeInspectionX, simplifies the process of creating and managing home inspection reports.
+          </p>
+        </div>
+        <div class="hidden md:block md:col-span-5" data-reveal data-reveal-delay="1">
+          <div class="aspect-[4/3] rounded-2xl bg-brand-500/5 dark:bg-brand-400/10 flex items-center justify-center">
+            <svg class="w-20 h-20 text-brand-500 dark:text-brand-400" viewBox="0 0 80 80" fill="none">
+              <rect x="8" y="8" width="64" height="64" rx="16" stroke="currentColor" stroke-width="1.5" />
+              <rect x="20" y="20" width="40" height="40" rx="10" stroke="currentColor" stroke-width="1.5" />
+              <rect x="32" y="32" width="16" height="16" rx="4" fill="currentColor" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apps -->
+  <section id="apps" class="py-24 md:py-32 bg-zinc-100 dark:bg-zinc-900">
+    <div class="w-full max-w-[1200px] mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold leading-tight tracking-tight text-zinc-900 dark:text-zinc-100"
+        data-reveal data-i18n="apps.headline">Our apps</h2>
+      <div id="apps-grid" class="mt-12 grid md:grid-cols-1 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 md:py-32">
+    <div class="w-full max-w-[1200px] mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold leading-tight tracking-tight text-zinc-900 dark:text-zinc-100"
+        data-reveal data-i18n="contact.headline">Contact</h2>
+      <div class="mt-12 grid md:grid-cols-2 gap-8" data-reveal data-reveal-delay="1">
+        <div>
+          <span class="text-xs font-mono font-medium uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400"
+            data-i18n="contact.email.label">Email</span>
+          <a href="mailto:support@patluck.com"
+            class="mt-2 block text-base font-medium text-zinc-900 dark:text-zinc-100 hover:text-brand-500 dark:hover:text-brand-400 transition-colors"
+            data-i18n="contact.email" data-const="email">support@patluck.com</a>
+        </div>
+        <div>
+          <span class="text-xs font-mono font-medium uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400"
+            data-i18n="contact.legal.label">Legal entity</span>
+          <p class="mt-2 text-base font-medium text-zinc-900 dark:text-zinc-100" data-i18n="contact.legal" data-const="legal_entity">Patluck LLC</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-zinc-200 dark:border-zinc-800">
+    <div class="w-full max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-zinc-500 dark:text-zinc-400" data-i18n="footer.tagline">Practical software for
+        professionals.</p>
+      <div class="flex items-center gap-4">
+        <a href="legal/privacy.html"
+          class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="legal/terms.html"
+          class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          data-i18n="footer.terms">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/constants.js"></script>
+  <script src="assets/js/cms-loader.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

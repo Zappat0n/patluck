@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "HomeInspectionX",
+      "tagline": "Home inspection reports, simplified.",
+      "description": "Home inspection reports, simplified. Generate professional reports in minutes, not hours.",
+      "icon": "assets/images/homeinspectionx-icon.svg",
+      "status": "Coming soon",
+      "link": "www.homeinspectionx.com"
+    }
+  ]
+}

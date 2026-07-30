@@ -1,0 +1,22 @@
+{
+  "_meta": { "lang": "ES" },
+  "nav.about": "Nosotros",
+  "nav.apps": "Apps",
+  "nav.contact": "Contacto",
+  "hero.headline": "Software que funciona.",
+  "hero.subtext": "Creamos herramientas para profesionales que necesitan aplicaciones fiables y bien diseñadas.",
+  "hero.cta": "Contactar",
+  "about.headline": "Qué hacemos",
+  "about.body": "Patluck LLC es un estudio de software que desarrolla aplicaciones prácticas para profesionales. Nuestro primer producto, HomeInspectionX, simplifica el proceso de creación y gestión de informes de inspección.",
+  "apps.headline": "Nuestras apps",
+  "apps.comingsoon": "Próximamente",
+  "contact.headline": "Contacto",
+  "contact.email.label": "Correo",
+  "contact.email": "support@patluck.com",
+  "contact.legal.label": "Entidad legal",
+  "contact.legal": "Patluck LLC",
+  "footer.copyright": "Patluck LLC",
+  "footer.privacy": "Política de privacidad",
+  "footer.terms": "Términos del servicio",
+  "footer.tagline": "Software práctico para profesionales."
+}
