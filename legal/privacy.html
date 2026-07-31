@@ -83,18 +83,6 @@
 <script src="../assets/js/cms-loader.js"></script>
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
-<script>
-(function(){
-  var DARK_KEY="patluck-theme";
-  function apply(d){document.documentElement.classList.toggle("dark",d);}
-  var saved=localStorage.getItem(DARK_KEY);
-  if(saved==="dark")apply(true);else if(saved==="light")apply(false);else apply(window.matchMedia("(prefers-color-scheme: dark)").matches);
-  var btn=document.getElementById("theme-toggle");
-  if(btn)btn.addEventListener("click",function(){
-    var is=document.documentElement.classList.contains("dark");
-    var n=!is;apply(n);localStorage.setItem(DARK_KEY,n?"dark":"light");
-  });
-})();
-</script>
+
 </body>
 </html>
