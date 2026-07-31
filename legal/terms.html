@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service — Patluck LLC</title>
-  <link rel="icon" href="../images/logo-light.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/images/logo-light.svg" type="image/svg+xml">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -26,62 +26,67 @@
     };
   </script>
 </head>
-<body class="font-sans antialiased text-[#1B1D1A] dark:text-[#EAEDE6] bg-[#F4F6F4] dark:bg-[#111311]">
+<body class="font-sans antialiased text-zinc-900 dark:text-zinc-100 bg-zinc-50 dark:bg-zinc-950">
 
-<header class="h-[68px] flex items-center bg-[#F4F6F4]/90 dark:bg-[#111311]/90 backdrop-blur-sm">
+<header class="h-[68px] flex items-center bg-zinc-50/90 dark:bg-zinc-950/90 backdrop-blur-sm">
   <nav class="w-full max-w-[800px] mx-auto px-6 flex items-center justify-between">
-    <a href="../" class="flex-shrink-0 text-brand-900 dark:text-brand-400">
-      <svg class="h-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" role="img"><title>Patluck</title><g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M72 12780 c-18 -11 -41 -34 -52 -52 -20 -33 -20 -64 -20 -6328 0 -6264 0 -6295 20 -6328 11 -18 34 -41 52 -52 33 -20 64 -20 6328 -20 6264 0 6295 0 6328 20 18 11 41 34 52 52 20 33 20 64 20 6328 0 6264 0 6295 -20 6328 -11 18 -34 41 -52 52 -33 20 -64 20 -6328 20 -6264 0 -6295 0 -6328 -20z m12518 -6380 l0 -6190 -6190 0 -6190 0 0 6190 0 6190 6190 0 6190 0 0 -6190z"/><path d="M6055 11556 c-231 -36 -445 -155 -636 -353 -136 -141 -228 -272 -338 -484 l-66 -126 -80 64 c-452 364 -917 445 -1381 240 -189 -83 -368 -212 -535 -383 -82 -85 -100 -110 -128 -178 -203 -488 -82 -1088 354 -1746 328 -496 814 -984 1400 -1405 123 -88 140 -102 110 -91 -70 26 -332 102 -487 141 -842 212 -1639 224 -2210 34 -513 -170 -885 -531 -984 -955 -29 -121 -26 -360 4 -474 86 -315 298 -567 656 -775 81 -48 275 -141 349 -168 16 -6 13 -14 -27 -65 -105 -137 -201 -318 -255 -481 -46 -139 -56 -211 -55 -391 0 -139 4 -179 23 -255 65 -250 207 -491 411 -696 167 -168 236 -210 430 -261 74 -20 110 -22 285 -22 169 0 215 3 298 22 322 71 676 244 998 487 179 135 278 223 484 429 288 289 510 560 746 914 60 89 109 161 109 159 0 -2 -14 -43 -30 -93 -133 -388 -241 -879 -286 -1294 -36 -324 -20 -753 37 -1033 113 -563 392 -967 804 -1167 271 -132 609 -129 880 8 273 137 487 376 675 754 l78 158 48 -39 c518 -409 1080 -451 1584 -120 226 148 420 346 474 482 210 532 18 1214 -540 1913 -332 417 -788 827 -1304 1172 -85 57 -157 106 -159 108 -2 2 43 -13 100 -32 410 -142 827 -241 1249 -296 141 -19 213 -22 495 -22 294 0 346 2 473 22 609 96 1020 341 1255 747 129 223 170 510 108 755 -28 107 -113 284 -182 375 -148 197 -393 384 -682 520 -58 28 -106 53 -107 58 0 4 22 35 49 70 148 190 245 380 303 597 29 110 36 355 14 475 -47 248 -159 467 -361 706 -88 103 -224 223 -282 249 -289 128 -655 131 -1022 10 -641 -211 -1331 -768 -1924 -1553 -53 -71 -97 -126 -97 -124 0 3 20 70 45 149 118 370 199 757 236 1123 18 178 16 572 -5 730 -81 629 -340 1067 -771 1305 -181 100 -416 139 -630 106z"/></g></svg>
+    <a href="../" class="flex-shrink-0 flex items-center gap-2.5">
+      <img src="../assets/images/logo-light.svg" alt="" class="h-8 w-8 flex-shrink-0 block dark:hidden" aria-hidden="true">
+      <img src="../assets/images/logo-dark.svg" alt="" class="h-8 w-8 flex-shrink-0 hidden dark:block" aria-hidden="true">
+      <span class="hidden md:inline text-lg font-bold tracking-tight text-brand-900 dark:text-brand-400 whitespace-nowrap">PATLUCK</span>
     </a>
-    <button id="theme-toggle" class="text-[#6B6E6A] dark:text-[#9DA09A] hover:text-[#1B1D1A] dark:hover:text-[#EAEDE6] transition-colors p-1" aria-label="Toggle theme">
+    <button id="theme-toggle" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors p-1" aria-label="Toggle theme">
       <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
       <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
     </button>
   </nav>
 </header>
 
-<main class="w-full max-w-[800px] mx-auto px-6 py-24">
+<main class="w-full max-w-[800px] mx-auto px-6 py-8">
   <h1 class="text-3xl md:text-4xl font-bold leading-tight tracking-tight">Terms of Service</h1>
-  <p class="mt-2 text-sm text-[#6B6E6A] dark:text-[#9DA09A]">Last updated: July 28, 2026</p>
+  <p class="mt-2 text-sm text-zinc-500 dark:text-zinc-400">Last updated: July 28, 2026</p>
 
   <section class="mt-10 space-y-8">
     <div>
       <h2 class="text-lg font-bold">1. Acceptance of Terms</h2>
-      <p class="mt-2 text-sm leading-relaxed text-[#6B6E6A] dark:text-[#9DA09A]">By accessing or using any application, website, or service operated by Patluck LLC ("we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree, do not use our services.</p>
+      <p class="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">By accessing or using any application, website, or service operated by Patluck LLC ("we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree, do not use our services.</p>
     </div>
     <div>
       <h2 class="text-lg font-bold">2. Services</h2>
-      <p class="mt-2 text-sm leading-relaxed text-[#6B6E6A] dark:text-[#9DA09A]">Patluck LLC develops and provides software applications for professionals. Specific terms for individual applications may be provided within those applications.</p>
+      <p class="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">Patluck LLC develops and provides software applications for professionals. Specific terms for individual applications may be provided within those applications.</p>
     </div>
     <div>
       <h2 class="text-lg font-bold">3. Intellectual Property</h2>
-      <p class="mt-2 text-sm leading-relaxed text-[#6B6E6A] dark:text-[#9DA09A]">All content, trademarks, and intellectual property associated with our services are owned by Patluck LLC. You may not reproduce, distribute, or create derivative works without our written permission.</p>
+      <p class="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">All content, trademarks, and intellectual property associated with our services are owned by Patluck LLC. You may not reproduce, distribute, or create derivative works without our written permission.</p>
     </div>
     <div>
       <h2 class="text-lg font-bold">4. Limitation of Liability</h2>
-      <p class="mt-2 text-sm leading-relaxed text-[#6B6E6A] dark:text-[#9DA09A]">Our services are provided "as is" without warranties of any kind. Patluck LLC shall not be liable for any damages arising from the use or inability to use our services.</p>
+      <p class="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">Our services are provided "as is" without warranties of any kind. Patluck LLC shall not be liable for any damages arising from the use or inability to use our services.</p>
     </div>
     <div>
       <h2 class="text-lg font-bold">5. Governing Law</h2>
-      <p class="mt-2 text-sm leading-relaxed text-[#6B6E6A] dark:text-[#9DA09A]">These terms are governed by the laws of the United States and the state in which Patluck LLC is registered.</p>
+      <p class="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">These terms are governed by the laws of the United States and the state in which Patluck LLC is registered.</p>
     </div>
     <div>
       <h2 class="text-lg font-bold">6. Changes to Terms</h2>
-      <p class="mt-2 text-sm leading-relaxed text-[#6B6E6A] dark:text-[#9DA09A]">We reserve the right to modify these terms at any time. Continued use of our services after changes constitutes acceptance of the new terms.</p>
+      <p class="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">We reserve the right to modify these terms at any time. Continued use of our services after changes constitutes acceptance of the new terms.</p>
     </div>
     <div>
       <h2 class="text-lg font-bold">7. Contact</h2>
-      <p class="mt-2 text-sm leading-relaxed text-[#6B6E6A] dark:text-[#9DA09A]">For questions about these terms, contact us at <span data-const="email">support@patluck.com</span>.</p>
+      <p class="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">For questions about these terms, contact us at <span data-const="email">support@patluck.com</span>.</p>
     </div>
   </section>
 </main>
 
-<footer class="py-8 border-t border-[#E0E3E0] dark:border-[#2A2D2A]">
+<footer class="py-8 border-t border-zinc-200 dark:border-zinc-800">
   <div class="w-full max-w-[800px] mx-auto px-6 text-center">
-    <p class="text-sm text-[#6B6E6A] dark:text-[#9DA09A]" data-const="legal_entity">Patluck LLC</p>
+    <p class="text-sm text-zinc-500 dark:text-zinc-400" data-const="legal_entity">Patluck LLC</p>
   </div>
 </footer>
 
+<script src="../assets/js/cms-loader.js"></script>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
 <script>
 (function(){
   var DARK_KEY="patluck-theme";
